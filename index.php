@@ -1,7 +1,8 @@
-// @codingStandardsIgnoreStart
 <?php
+// @codingStandardsIgnoreStart
+
 $host = 'localhost';
-$db   = 'netland';
+$db = 'netland';
 $user = 'root';
 $pass = '';
 $charset = 'utf8mb4';
