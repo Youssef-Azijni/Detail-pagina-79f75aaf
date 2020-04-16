@@ -1,7 +1,5 @@
 <?php
-// @codingStandardsIgnoreStart
-
-$host = 'localhost';
+$host = '127.0.0.1:3306';
 $db = 'netland';
 $user = 'root';
 $pass = '';
@@ -20,21 +18,22 @@ try {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
 
+
 echo "<h1>Welcome, this is your $db control panel, change whatever you like. </h1>";
 
 $seriesDATA = 'SELECT * FROM series';
 
 $seriesQuery = $pdo->query($seriesDATA);
-$series = seriesQuery->fetchALL(PDO::FETCH_ASSOC);
+$series = $seriesQuery->fetchALL(PDO::FETCH_ASSOC);
 
 echo "
 <h2>Series </h2>
 <table>
     <tr>
-        <td style="font - weight:bold"> Title </td>
-        <td style="font - weight:bold"> Title </td>
+        <td style="font - weight: bold;"> Title </td>
+        <td style="font - weight: bold'> Title </td>
     <tr>
-";
+';
 
 foreach ($series as $row) {
     echo "
@@ -61,4 +60,4 @@ foreach ($movies as $row) {
 }
 
 echo "</table>";
-// @codingStandardsIgnoreEnd
+
